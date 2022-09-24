@@ -1,0 +1,71 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/lVy5Zqcty2NfemqKYbVJfdg44rK.jpg",
+      "genre_ids": [28, 80],
+      "id": 24,
+      "original_language": "en",
+      "original_title": "Kill Bill: Vol. 1",
+      "overview": "An assassin is shot by her ruthless employer, Bill, and other members of their assassination circle – but she lives to plot her vengeance.",
+      "popularity": 37.803,
+      "poster_path": "/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg",
+      "release_date": "2003-10-10",
+      "title": "Kill Bill: Vol. 1",
+      "video": false,
+      "vote_average": 8,
+      "vote_count": 14996
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/70EtzaGfO2d8X5n8SLI4s61KuJh.jpg",
+      "genre_ids": [28, 80, 53],
+      "id": 393,
+      "original_language": "en",
+      "original_title": "Kill Bill: Vol. 2",
+      "overview": "The Bride unwaveringly continues on her roaring rampage of revenge against the band of assassins who had tried to kill her and her unborn child. She visits each of her former associates one-by-one, checking off the victims on her Death List Five until there's nothing left to do … but kill Bill.",
+      "popularity": 35.259,
+      "poster_path": "/2yhg0mZQMhDyvUQ4rG1IZ4oIA8L.jpg",
+      "release_date": "2004-04-16",
+      "title": "Kill Bill: Vol. 2",
+      "video": false,
+      "vote_average": 7.9,
+      "vote_count": 12022
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/itcAHIwxKvSkFEVUsqSpOEIRwZy.jpg",
+      "genre_ids": [28, 80, 53],
+      "id": 414419,
+      "original_language": "en",
+      "original_title": "Kill Bill: The Whole Bloody Affair",
+      "overview": "An assassin is shot and almost killed by her ruthless employer, Bill, and other members of their assassination circle – but she lives to plot her vengeance.  Kill Bill: The Whole Bloody Affair is a complete edit of the two-part martial arts action films Kill Bill: Vol. 1 and Kill Bill: Vol. 2. The film was originally scheduled to be released as one part. However, due to the film's over 4 hour running time, it was split into two parts.",
+      "popularity": 20.443,
+      "poster_path": "/zomX76Pf3nUaTzRBk5BveLk1QPu.jpg",
+      "release_date": "2011-03-27",
+      "title": "Kill Bill: The Whole Bloody Affair",
+      "video": false,
+      "vote_average": 8,
+      "vote_count": 792
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [35],
+      "id": 1001886,
+      "original_language": "en",
+      "original_title": "Kill Bill Parody",
+      "overview": "A woman and her child are kidnapped by her lover and plans revenge on him.",
+      "popularity": 0.6,
+      "poster_path": null,
+      "release_date": "",
+      "title": "Kill Bill Parody",
+      "video": false,
+      "vote_average": 10,
+      "vote_count": 1
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 4
+}

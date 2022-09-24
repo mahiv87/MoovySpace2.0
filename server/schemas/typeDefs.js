@@ -9,6 +9,16 @@ const typeDefs = gql`
 		savedMovies: [Movie]!
 		likedMovies: [Movie]!
 		favoriteMovies: [Movie]!
+		rankedMovies: [Movie]!
+		moovyFriends: [User]!
+		notifications: Boolean
+	}
+
+	type Ranking {
+		rankId: Int
+		author: User
+		ranking: Int
+		createdAt: String
 	}
 
 	type Movie {
@@ -19,6 +29,8 @@ const typeDefs = gql`
 		backdrop: String
 		trailer: String
 		createdAt: String
+		rankings: [Ranking]!
+		moovyStars: Int
 	}
 
 	input inputMovie {
@@ -39,9 +51,12 @@ const typeDefs = gql`
 	type Query {
 		users: [User]
 		user(username: String!): User
-		movies(username: String): [Movie]
+		movies(username: String!): [Movie]
 		movie(movieId: String!): Movie
 		me: User
+
+		userMoovyFriends(username: String): [User]
+		rankedMovies(username: String): [Movie]
 	}
 
 	type Mutation {
@@ -53,6 +68,10 @@ const typeDefs = gql`
 		removeMovie(movieId: Int!): User
 		unlikeMovie(movieId: Int!): User
 		unfavoriteMovie(movieId: Int!): User
+
+		giveMoovyStars(userId: ID!, ranking: Int!, movieId: Int!): User
+		addMoovyFriend(userId: ID!, friendId: ID!): User
+		toggleNotifications(userId: ID!): User
 	}
 `;
 

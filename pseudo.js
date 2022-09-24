@@ -14,7 +14,7 @@
 //? (4) Be able to add top 3 favorite movies as part of the signup process 
 // Based on those 3 movies, we can give them recommendations on what other movies they should watch
 //? (5) Add a ranking system (our own version of Rotten Tomatoes rankings)
-// MOOVY STARS -- 10 point ranking
+// MOOVY STARS -- 5 point ranking
 //? (6) Sign up for notifications
 // email notifications based off movies that you like
 // research how to schedule events with node

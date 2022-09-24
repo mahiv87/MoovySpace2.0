@@ -1,6 +1,9 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 const movieSchema = require('./Movie');
+const rankingSchema = require('./Ranking');
+
+const ObjectId = Schema.Types.ObjectId;
 
 const userSchema = new Schema(
 	{
@@ -23,7 +26,18 @@ const userSchema = new Schema(
 		},
 		savedMovies: [movieSchema],
 		likedMovies: [movieSchema],
-		favoriteMovies: [movieSchema]
+		favoriteMovies: [movieSchema],
+		rankedMovies: [movieSchema],
+		moovyFriends: [
+			{
+				type: ObjectId,
+				ref: "User"
+			}
+		],
+		notifications: {
+			type: Boolean,
+			default: false
+		}
 	},
 	{
 		toJSON: {
@@ -37,7 +51,6 @@ userSchema.pre('save', async function (next) {
 		const saltRounds = 10;
 		this.password = await bcrypt.hash(this.password, saltRounds);
 	}
-
 	next();
 });
 
