@@ -163,12 +163,16 @@ const SearchBar = () => {
     }
   };
 
+  const resetTitles = top100Films.map((option) => option.title);
+
   const handleSelect = (e) => setSearch(e.target.value);
 
   const handleTitleSuggestion = (e) => {
-    if (e.target.value !== "") {
+    if (e.target.value !== "" && e.target.value.length >= 3) {
       setSearch(e.target.value);
       findTitles(e.target.value);
+    } else {
+      setTitleOptions(resetTitles);
     }
   };
 
@@ -185,7 +189,7 @@ const SearchBar = () => {
           id="searchBar"
           onChange={handleInputChange}
           freeSolo
-          style={{color: 'white'}}
+          style={{ color: "white" }}
           options={titleOptions}
           onSelect={handleSelect}
           renderInput={(params) => (
@@ -193,7 +197,7 @@ const SearchBar = () => {
               {...params}
               id="searchBox"
               label="Search Box"
-              style={{color: 'white'}}
+              style={{ color: "white" }}
               onChange={handleTitleSuggestion}
               value={search}
             />
