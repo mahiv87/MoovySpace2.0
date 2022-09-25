@@ -31,20 +31,20 @@ const movieSchema = new Schema({
 		default: Date.now,
 		get: (timestamp) => dateFormat(timestamp)
 	},
-	rankings: [rankingSchema],
-	moovyStars: {
-		type: Number,
-		default: () => {
-			let total = this.rankings.length ? 0 : null;
-			if (total !== null) {
-				for (let ranking of this.rankings) {
-					total += ranking.ranking
-				}
-				return Math.round((total / this.rankings.length) * 10);
-			}
-			return null;
-		}
-	}
+	rankings: [rankingSchema]
+},
+{
+	toJSON: {
+		getters: true,
+		virtuals: true
+	},
+	id: false,
 });
 
-module.exports = movieSchema;
+movieSchema.virtual('avgRanking').get(function() {
+    return this.rankings.length;
+});
+
+const Movie = model('Movie', movieSchema);
+
+module.exports = Movie;

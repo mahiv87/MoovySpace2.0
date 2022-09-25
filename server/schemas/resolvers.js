@@ -9,7 +9,7 @@ const resolvers = {
 			return User.find().populate('savedMovies').sort({ savedMovies: 'ASC'});
 		},
 		user: async (parent, { username }) => {
-			return await User.findOne({ username }).populate('savedMovies').populate('likedMovies').populate('favoriteMovies');
+			return await User.findOne({ username }).populate('savedMovies').populate('likedMovies').populate('favoriteMovies').populate('rankedMovies').populate('moovyFriends').populate('sentFriendRequests').populate('receivedFriendRequests');
 		},
 		movies: async (parent, { username }) => {
 			const params = username ? { username } : {};
@@ -20,10 +20,11 @@ const resolvers = {
 		},
 		me: async (parent, args, context) => {
 			if (context.user) {
-				return await User.findOne({ _id: context.user._id }).populate('savedMovies').populate('likedMovies').populate('favoriteMovies');
+				return await User.findOne({ _id: context.user._id }).populate('savedMovies').populate('likedMovies').populate('favoriteMovies').populate('rankedMovies').populate('moovyFriends').populate('sentFriendRequests').populate('receivedFriendRequests');
 			}
 			throw new AuthenticationError('You need to be logged in!');
 		}
+		// TODO: add queries for "userMoovyFriends" and "rankedMovies"
 	},
 
 	// Mutations
@@ -142,6 +143,8 @@ const resolvers = {
 			}
 			throw new AuthenticationError('You need to be logged in!');
 		},
+
+		// TODO: add mutations for "giveMoovyRank", "sendFriendRequest", "toggleFriendResponse" and "toggleNotifications"
 	}
 
 };

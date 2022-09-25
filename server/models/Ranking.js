@@ -5,7 +5,7 @@ const ObjectId = Schema.Types.ObjectId;
 
 const rankingSchema = new Schema({
   rankId: {
-    type: Number,
+    type: String,
 		required: true
   },
   author: {
@@ -15,6 +15,9 @@ const rankingSchema = new Schema({
   ranking: {
     type: Number,
     max: 10
+  },
+  review: {
+    type: String
   },
   createdAt: {
     type: Date,

@@ -24,11 +24,46 @@ const userSchema = new Schema(
 			required: true,
 			minlength: 5
 		},
-		savedMovies: [movieSchema],
-		likedMovies: [movieSchema],
-		favoriteMovies: [movieSchema],
-		rankedMovies: [movieSchema],
+		savedMovies: [
+			{
+				type: ObjectId,
+				ref: "Movie"
+			}
+		],
+		likedMovies: [
+			{
+				type: ObjectId,
+				ref: "Movie"
+			}
+		],
+		favoriteMovies: [
+			{
+				type: ObjectId,
+				ref: "Movie"
+			}
+		],
+		rankedMovies: [
+			{
+				movie: {
+					type: ObjectId,
+					ref: "Movie"
+				},
+				ranking: rankingSchema
+			}
+		],
 		moovyFriends: [
+			{
+				type: ObjectId,
+				ref: "User"
+			}
+		],
+		sentFriendRequests: [
+			{
+				type: ObjectId,
+				ref: "User"
+			}
+		],
+		receivedFriendRequests: [
 			{
 				type: ObjectId,
 				ref: "User"

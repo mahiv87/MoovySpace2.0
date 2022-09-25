@@ -1,6 +1,7 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
+
 	type User {
 		_id: ID
 		username: String
@@ -9,19 +10,23 @@ const typeDefs = gql`
 		savedMovies: [Movie]!
 		likedMovies: [Movie]!
 		favoriteMovies: [Movie]!
-		rankedMovies: [Movie]!
+		rankedMovies: [MovieRanking]!
 		moovyFriends: [User]!
+		sentFriendRequests: [User]!
+		receivedFriendRequests: [User]!
 		notifications: Boolean
 	}
 
 	type Ranking {
-		rankId: Int
+		rankId: String
 		author: User
 		ranking: Int
+		review: String
 		createdAt: String
 	}
 
 	type Movie {
+		_id: ID
 		movieId: Int
 		title: String
 		description: String
@@ -30,7 +35,11 @@ const typeDefs = gql`
 		trailer: String
 		createdAt: String
 		rankings: [Ranking]!
-		moovyStars: Int
+	}
+
+	type MovieRanking {
+		movie: Movie
+		ranking: Ranking
 	}
 
 	input inputMovie {
@@ -56,7 +65,7 @@ const typeDefs = gql`
 		me: User
 
 		userMoovyFriends(username: String): [User]
-		rankedMovies(username: String): [Movie]
+		rankedMovies(username: String): [MovieRanking]
 	}
 
 	type Mutation {
@@ -69,8 +78,9 @@ const typeDefs = gql`
 		unlikeMovie(movieId: Int!): User
 		unfavoriteMovie(movieId: Int!): User
 
-		giveMoovyStars(userId: ID!, ranking: Int!, movieId: Int!): User
-		addMoovyFriend(userId: ID!, friendId: ID!): User
+		giveMoovyRank(userId: ID!, ranking: Int!, movieId: Int!, review: String): User
+		sendFriendRequest(userId: ID!, friendId: ID!): User
+		toggleFriendResponse(action: String!, userId: ID!, friendId: ID!)
 		toggleNotifications(userId: ID!): User
 	}
 `;
