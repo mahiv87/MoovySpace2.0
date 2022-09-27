@@ -3,6 +3,7 @@
     "prettier.tabWidth": 2,
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
+    "prettier.singleQuote": true,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },

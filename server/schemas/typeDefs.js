@@ -18,7 +18,6 @@ const typeDefs = gql`
 	}
 
 	type Ranking {
-		rankId: String
 		author: User
 		ranking: Int
 		review: String
@@ -60,11 +59,12 @@ const typeDefs = gql`
 	type Query {
 		users: [User]
 		user(username: String!): User
-		movies(username: String!): [Movie]
-		movie(movieId: String!): Movie
+		# movies(username: String!): [Movie]
+		# movie(movieId: String!): Movie
+		allMovies: [Movie]
+		movieDetails(movieId: _id): Movie
 		me: User
 
-		userMoovyFriends(username: String): [User]
 		rankedMovies(username: String): [MovieRanking]
 	}
 
@@ -74,11 +74,14 @@ const typeDefs = gql`
 		saveMovie(movie: inputMovie!): User
 		likeMovie(movie: inputMovie!): User
 		favoriteMovie(movie: inputMovie!): User
-		removeMovie(movieId: Int!): User
-		unlikeMovie(movieId: Int!): User
-		unfavoriteMovie(movieId: Int!): User
+		# removeMovie(movieId: Int!): User
+		# unlikeMovie(movieId: Int!): User
+		# unfavoriteMovie(movieId: Int!): User
+		removeMovie(movieId: ID!): User
+		unlikeMovie(movieId: ID!): User
+		unfavoriteMovie(movieId: ID!): User
 
-		giveMoovyRank(userId: ID!, ranking: Int!, movieId: Int!, review: String): User
+		giveMoovyRank(ranking: Int!, movie: inputMovie!, review: String): User
 		sendFriendRequest(userId: ID!, friendId: ID!): User
 		toggleFriendResponse(action: String!, userId: ID!, friendId: ID!)
 		toggleNotifications(userId: ID!): User
