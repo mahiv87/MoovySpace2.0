@@ -1,14 +1,14 @@
-import "./homepage.css";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Login from "../Login/Login";
-import Signup from "../Signup/Signup";
-import Modal from "../Modal/Modal";
+import './homepage.css';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Login from '../Login/Login';
+import Signup from '../Signup/Signup';
+import Modal from '../Modal/Modal';
 
-import Auth from "../../utils/auth";
+import Auth from '../../utils/auth';
 
 const BUTTON_WRAPPER_STYLES = {
-  position: "relative",
+  position: 'relative',
   zIndex: 1,
 };
 
@@ -53,7 +53,7 @@ const HomePage = () => {
             ) : (
               <>
                 <div style={BUTTON_WRAPPER_STYLES}>
-                  {hide === true ? "" : <Login />}
+                  {hide === true ? '' : <Login />}
                   <Modal
                     open={isOpen}
                     onClose={() => {
@@ -65,7 +65,7 @@ const HomePage = () => {
                   </Modal>
                   <div className="signUpOne">
                     {hide === true ? (
-                      ""
+                      ''
                     ) : (
                       <button
                         className="btn btn-primary "

@@ -17,13 +17,13 @@ const Profile = () => {
 
   // navigate to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Navigate to='/profile' />;
+    return <Navigate to="/profile" />;
   }
   if (loading) {
     return (
-      <div className='loader'>
-        <div className='loader__filmstrip'></div>
-        <p className='loader__text'>loading</p>
+      <div className="loader">
+        <div className="loader__filmstrip"></div>
+        <p className="loader__text">loading</p>
       </div>
     );
   }
@@ -36,42 +36,41 @@ const Profile = () => {
     );
   }
 
-  console.log(user)
+  console.log(user);
   return (
     <div>
-      <div className='flex-row justify-center mb-3'>
-        <h2 className='col-12 col-md-10 bg-dark text-light p-3 mb-5'>
+      <div className="flex-row justify-center mb-3">
+        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
 
-        <div className='col-12 col-md-10 mb-5'></div>
-        
-          <div className=''>
-            {user.favoriteMovies.length > 0 ? (
-              <FavoriteMovies favoriteMovies={user.favoriteMovies} />
-            ) : (
-              <div className='errorMessage'>
-                <h2>Add your favorite movies to view them here!</h2>
-              </div>
-            )}
+        <div className="col-12 col-md-10 mb-5"></div>
 
-            {user.likedMovies.length > 0 ? (
-              <LikedMovies likedMovies={user.likedMovies} />
-            ) : (
-              <div className='errorMessage'>
-                <h2>Like some movies, you delinquent!</h2>
-              </div>
-            )}
+        <div className="">
+          {user.favoriteMovies.length > 0 ? (
+            <FavoriteMovies favoriteMovies={user.favoriteMovies} />
+          ) : (
+            <div className="errorMessage">
+              <h2>Add your favorite movies to view them here!</h2>
+            </div>
+          )}
 
-            {user.savedMovies.length > 0 ? (
-              <WatchListMovies savedMovies={user.savedMovies} />
-            ) : (
-              <div className='errorMessage'>
-                <h2>Watch something, scoundrel!</h2>
-              </div>
-            )}
-          </div>
-       
+          {user.likedMovies.length > 0 ? (
+            <LikedMovies likedMovies={user.likedMovies} />
+          ) : (
+            <div className="errorMessage">
+              <h2>Like some movies, you delinquent!</h2>
+            </div>
+          )}
+
+          {user.savedMovies.length > 0 ? (
+            <WatchListMovies savedMovies={user.savedMovies} />
+          ) : (
+            <div className="errorMessage">
+              <h2>Watch something, scoundrel!</h2>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

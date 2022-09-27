@@ -1,43 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Feed from "./pages/Feed/Feed";
-import MobileNav from "./components/nav/Nav";
-import Footer from "./components/Footer/Footer";
+import Feed from './pages/Feed/Feed';
+import MobileNav from './components/nav/Nav';
+import Footer from './components/Footer/Footer';
 
-import Home from "./pages/Home/Home";
-import Profile from "./pages/Profile";
-import Welcome from "./components/HomePage/HomePage";
-import FavoriteMovies from "./components/FavoriteMovies/";
-import SearchBar from "./components/SearchBar/SearchBar";
+import Home from './pages/Home/Home';
+import Profile from './pages/Profile';
+import Welcome from './components/HomePage/HomePage';
+import FavoriteMovies from './components/FavoriteMovies/';
+import SearchBar from './components/SearchBar/SearchBar';
 
 // import axios
-import axios from "axios";
+import axios from 'axios';
 
 export const AppContext = React.createContext();
 const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: '/graphql',
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
-  const token = localStorage.getItem("id_token");
+  const token = localStorage.getItem('id_token');
   // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : "",
+      authorization: token ? `Bearer ${token}` : '',
     },
   };
 });
@@ -51,7 +51,7 @@ const client = new ApolloClient({
 export function App() {
   // Declare a new state variable called "results"
   const [details, setDetails] = useState([]);
-  const [trailer, setTrailer] = useState("8trTO5mJYsg");
+  const [trailer, setTrailer] = useState('8trTO5mJYsg');
 
   // Get movie & trailer data from API
   // Add error catching for movies that don't have trailer videos & add rendering of something to show there's no trailer
@@ -71,7 +71,7 @@ export function App() {
           )
           .then((responseTwo) => {
             if (responseTwo.data.results.length === 0) {
-              setTrailer("");
+              setTrailer('');
             }
             setTrailer(responseTwo.data.results[0].key);
           });
@@ -79,7 +79,7 @@ export function App() {
   };
 
   useEffect(() => {
-    searchMovie("Kill Bill");
+    searchMovie('Kill Bill');
   }, []);
 
   const globalState = {

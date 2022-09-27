@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./Trailer.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Trailer.css';
 
 const Trailer = ({ embedId }) => (
   <div className="video-responsive">

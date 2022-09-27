@@ -10,10 +10,18 @@ const Nav = () => {
   return (
     <nav>
       <>
-        <Link to='/'><HomeOutlinedIcon /></Link>
-        <Link to='/home'><SavedSearchOutlinedIcon /></Link>
-        <Link to='/feed'><DynamicFeedOutlinedIcon /></Link>
-        <Link to='/profile'><AccountBoxOutlinedIcon/></Link>
+        <Link to="/">
+          <HomeOutlinedIcon />
+        </Link>
+        <Link to="/home">
+          <SavedSearchOutlinedIcon />
+        </Link>
+        <Link to="/feed">
+          <DynamicFeedOutlinedIcon />
+        </Link>
+        <Link to="/profile">
+          <AccountBoxOutlinedIcon />
+        </Link>
       </>
     </nav>
   );
