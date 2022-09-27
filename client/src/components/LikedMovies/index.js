@@ -39,19 +39,20 @@ function LikedMovies(props) {
   //After it is set, it will useEffect
 
   useEffect(() => {
+    let newCount = 1; // num cards in carousel
     if (currentWidth > 800) {
-      //5 cards in carousel
-      setCount(5);
+      newCount = 5;
     } else if (currentWidth > 600) {
-      //4 cards in carousel
-      setCount(4);
+      newCount = 4;
     } else if (currentWidth > 500) {
-      //3 cards in carousel
-      setCount(3);
+      newCount = 3;
     } else if (currentWidth > 400) {
-      setCount(2);
+      newCount = 2;
     }
-    setIterable(new Array(Math.ceil(user.likedMovies.length / count)).fill(0));
+    setCount(newCount);
+    setIterable(
+      new Array(Math.ceil(user.likedMovies.length / newCount)).fill(0)
+    );
   }, [currentWidth]);
   //Constantly looking at the width of the users view port
   //And adjusting the cards count in the carousel

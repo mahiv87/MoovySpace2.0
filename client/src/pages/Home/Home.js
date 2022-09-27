@@ -95,7 +95,7 @@ const Home = () => {
         <div className="movie_card single">
           <div className="info_section">
             <div className="movie_header">
-              <img className="locandina" src={posterImage} />
+              <img className="locandina" src={posterImage} alt="movie poster" />
               <h1 id="movieTitle">{searchContext.details.title}</h1>
               <p className="text">{searchContext.details.overview}</p>
               {Auth.loggedIn() && (
@@ -142,7 +142,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <img className="blur_back" src={movieBackdrop}></img>
+          <img className="blur_back" src={movieBackdrop} alt="movie backdrop" />
         </div>
       </div>
     </main>
@@ -150,19 +150,3 @@ const Home = () => {
 };
 
 export default Home;
-
-{
-  /* <div id="moviePoster">
-				<img src={posterImage} alt="Movie Poster" />
-			</div>
-			<div className="movieDetails">
-				<h1>{searchContext.details.title}</h1>
-				<p>{searchContext.details.overview}</p>
-				<div className="trailerContainer">
-					{searchContext.trailer ? (
-						<Trailer className="trailer" embedId={searchContext.trailer} />
-					) : (
-						<p> VIDEO TRAILER IS NOT AVAILABLE</p>
-					)}
-				</div> */
-}

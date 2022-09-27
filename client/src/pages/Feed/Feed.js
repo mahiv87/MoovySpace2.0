@@ -56,6 +56,7 @@ const Feed = () => {
                           src={`https://image.tmdb.org/t/p/w300${
                             user.savedMovies.at(-1).image
                           }`}
+                          alt="saved movie poster"
                         />
                         <h1 id="movieTitle">{user.savedMovies.at(-1).title}</h1>
                         <div className="movieUser">
@@ -102,6 +103,7 @@ const Feed = () => {
                       src={`https://image.tmdb.org/t/p/original${
                         user.savedMovies.at(-1).backdrop
                       }`}
+                      alt="movie backdrop"
                     ></img>
                   </div>
                 </div>
