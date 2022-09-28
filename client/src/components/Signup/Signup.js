@@ -19,21 +19,21 @@ export default function Signup() {
   const password = document.getElementById('password');
   const email = document.getElementById('email');
 
-  const favoriteMovie1 = document.getElementById('favoriteMovie1');
-  const favoriteMovie2 = document.getElementById('favoriteMovie2');
-  const favoriteMovie3 = document.getElementById('favoriteMovie3');
+	const favoriteMovie1 = document.getElementById('favoriteMovie1');
+	const favoriteMovie2 = document.getElementById('favoriteMovie2');
+	const favoriteMovie3 = document.getElementById('favoriteMovie3');
 
-  var windowSize = window.innerWidth;
-  console.log(windowSize);
+	var windowSize = window.width;
 
-  const [formState, setFormState] = useState({
-    username: '',
-    email: '',
-    password: '',
-    firstFavMovie: '',
-    secondFavMovie: '',
-    thirdFavMovie: '',
-  });
+
+	const [formState, setFormState] = useState({
+		username: '',
+		email: '',
+		password: '',
+		firstFavMovie: '',
+		secondFavMovie: '',
+		thirdFavMovie: ''
+	});
 
   const [addUser, { error, data }] = useMutation(ADD_USER);
   const [favoriteMovie] = useMutation(FAVORITE_MOVIE);
