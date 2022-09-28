@@ -29,6 +29,7 @@ const Login = (props) => {
       });
 
       Auth.login(data.login.token);
+      window.location.assign('/');
     } catch (e) {
       console.error(e);
     }
