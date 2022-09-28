@@ -28,11 +28,11 @@ const Login = (props) => {
 				variables: { ...formState }
 			});
 
-			Auth.login(data.login.token);
-			window.location.assign('/');
-		} catch (e) {
-			console.error(e);
-		}
+      Auth.login(data.login.token);
+      window.location.assign('/');
+    } catch (e) {
+      console.error(e);
+    }
 
 		// clear form values
 		setFormState({
