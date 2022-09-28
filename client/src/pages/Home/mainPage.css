@@ -71,14 +71,14 @@
   top: -25px;
 }
 
-.movie_card_search {
+.main_movie_card {
   position: relative;
   display: block;
   margin: auto;
-  margin-top: 20px;
-  width: 80vw;
-  max-width: 1200px;
-  height: 500px;
+  margin-block: 3rem;
+  width: 90vw;
+  max-width: 1400px;
+  height: 800px;
   overflow: hidden;
   border-radius: 10px;
   -webkit-transition: all 0.4s;
@@ -87,7 +87,7 @@
           box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
 }
 
-.movie_card_search:hover {
+.main_movie_card:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
   -webkit-box-shadow: 0px 0px 80px -25px rgba(0, 0, 0, 0.5);
@@ -96,42 +96,41 @@
   transition: all 0.4s;
 }
 
-.movie_card_search .info_section {
+.main_movie_card .info_section {
   position: relative;
   width: 100%;
   height: 100%;
   background-blend-mode: multiply;
   z-index: 2;
   border-radius: 10px;
-  overflow: scroll;
 }
 
-.movie_card_search .info_section .movie_header {
+.main_movie_card .info_section .movie_header {
   position: relative;
   padding: 5px;
   height: 40%;
 }
 
-.movie_card_search .info_section .movie_header h1 {
+.main_movie_card .info_section .movie_header h1 {
   color: black;
   font-weight: 400;
 }
 
-.movie_card_search .info_section .movie_header h4 {
+.main_movie_card .info_section .movie_header h4 {
   color: #555;
   font-weight: 400;
 }
 
-.movie_card_search .info_section .movie_header p {
+.main_movie_card .info_section .movie_header p {
   color: black;
 }
 
-.movie_card_search .info_section .movie_header .type {
+.main_movie_card .info_section .movie_header .type {
   display: inline-block;
   color: #000000;
 }
 
-.movie_card_search .info_section .movie_header .locandina {
+.main_movie_card .info_section .movie_header .locandina {
   position: relative;
   float: left;
   margin: 10px;
@@ -141,29 +140,28 @@
           box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
 }
 
-.movie_card_search .info_section .movie_desc {
+.main_movie_card .info_section .movie_desc {
   padding: 25px;
   height: 50%;
   position: relative;
-  margin-top: 120px;
 }
 
-.movie_card_search .info_section .movie_desc .text {
+.main_movie_card .info_section .movie_desc .text {
   color: #545454;
   margin-top: 30px;
 }
 
-.movie_card_search .info_section .movie_social {
+.main_movie_card .info_section .movie_social {
   height: 10%;
   padding-left: 15px;
 }
 
-.movie_card_search .info_section .movie_social ul {
+.main_movie_card .info_section .movie_social ul {
   list-style: none;
   padding: 0;
 }
 
-.movie_card_search .info_section .movie_social ul li {
+.main_movie_card .info_section .movie_social ul li {
   display: inline-block;
   color: rgba(0, 0, 0, 0.3);
   -webkit-transition: color 0.3s;
@@ -173,13 +171,13 @@
   margin: 0 10px;
 }
 
-.movie_card_search .info_section .movie_social ul li:hover {
+.main_movie_card .info_section .movie_social ul li:hover {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.movie_card_search .blur_back {
+.main_movie_card .blur_back {
   position: absolute;
   top: 0;
   z-index: 1;

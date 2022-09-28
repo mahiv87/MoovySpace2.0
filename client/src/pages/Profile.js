@@ -54,7 +54,7 @@ const Profile = () => {
             <FavoriteMovies favoriteMovies={user.favoriteMovies} />
           ) : (
             <div className="errorMessage">
-              <h2>Add your favorite movies to view them here!</h2>
+              <h2>Other users favorite movies coming...</h2>
             </div>
           )}
 
@@ -64,20 +64,16 @@ const Profile = () => {
               <h2 className="movie-headers">Liked Movies</h2>
             </div>
           ) : (
-            <div className="errorMessage">
-              <h2>Like some movies, you delinquent!</h2>
-            </div>
+            <div className="errorMessage"></div>
           )}
 
           {user.savedMovies.length > 0 ? (
             <div>
               <WatchListMovies savedMovies={user.savedMovies} />
-              <h2 className="movie-headers">Watch Later</h2>
+              <h2 className="movie-headers">Watch Later Movies</h2>
             </div>
           ) : (
-            <div className="errorMessage">
-              <h2>Watch something, scoundrel!</h2>
-            </div>
+            <div className="errorMessage"></div>
           )}
         </div>
       </div>

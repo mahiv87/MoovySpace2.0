@@ -147,7 +147,7 @@ export default function Signup() {
       transition: {
         //different types can be applied such as 'tween' or 'inertia'
         type: 'spring',
-        stiffness: '30',
+        stiffness: '40',
       },
     });
   }
@@ -159,7 +159,7 @@ export default function Signup() {
       transition: {
         //Stiffness will change how much 'springiness' is applied
         type: 'spring',
-        stiffness: '30',
+        stiffness: '40',
       },
     });
   }
@@ -169,7 +169,7 @@ export default function Signup() {
       x: '-18vw',
       transition: {
         type: 'spring',
-        stiffness: '30',
+        stiffness: '40',
       },
     });
   }
