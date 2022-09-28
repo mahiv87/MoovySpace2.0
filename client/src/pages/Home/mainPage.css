@@ -49,7 +49,6 @@
   padding: 0;
   border: none;
   background: none;
-  color: blue;
   cursor: pointer;
 }
 
@@ -72,7 +71,7 @@
   top: -25px;
 }
 
-.movie_card {
+.movie_card_search {
   position: relative;
   display: block;
   margin: auto;
@@ -88,7 +87,7 @@
           box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
 }
 
-.movie_card:hover {
+.movie_card_search:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
   -webkit-box-shadow: 0px 0px 80px -25px rgba(0, 0, 0, 0.5);
@@ -97,7 +96,7 @@
   transition: all 0.4s;
 }
 
-.movie_card .info_section {
+.movie_card_search .info_section {
   position: relative;
   width: 100%;
   height: 100%;
@@ -107,32 +106,32 @@
   overflow: scroll;
 }
 
-.movie_card .info_section .movie_header {
+.movie_card_search .info_section .movie_header {
   position: relative;
   padding: 5px;
   height: 40%;
 }
 
-.movie_card .info_section .movie_header h1 {
+.movie_card_search .info_section .movie_header h1 {
   color: black;
   font-weight: 400;
 }
 
-.movie_card .info_section .movie_header h4 {
+.movie_card_search .info_section .movie_header h4 {
   color: #555;
   font-weight: 400;
 }
 
-.movie_card .info_section .movie_header p {
+.movie_card_search .info_section .movie_header p {
   color: black;
 }
 
-.movie_card .info_section .movie_header .type {
+.movie_card_search .info_section .movie_header .type {
   display: inline-block;
   color: #000000;
 }
 
-.movie_card .info_section .movie_header .locandina {
+.movie_card_search .info_section .movie_header .locandina {
   position: relative;
   float: left;
   margin: 10px;
@@ -142,29 +141,29 @@
           box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
 }
 
-.movie_card .info_section .movie_desc {
+.movie_card_search .info_section .movie_desc {
   padding: 25px;
   height: 50%;
   position: relative;
   margin-top: 120px;
 }
 
-.movie_card .info_section .movie_desc .text {
+.movie_card_search .info_section .movie_desc .text {
   color: #545454;
   margin-top: 30px;
 }
 
-.movie_card .info_section .movie_social {
+.movie_card_search .info_section .movie_social {
   height: 10%;
   padding-left: 15px;
 }
 
-.movie_card .info_section .movie_social ul {
+.movie_card_search .info_section .movie_social ul {
   list-style: none;
   padding: 0;
 }
 
-.movie_card .info_section .movie_social ul li {
+.movie_card_search .info_section .movie_social ul li {
   display: inline-block;
   color: rgba(0, 0, 0, 0.3);
   -webkit-transition: color 0.3s;
@@ -174,13 +173,13 @@
   margin: 0 10px;
 }
 
-.movie_card .info_section .movie_social ul li:hover {
+.movie_card_search .info_section .movie_social ul li:hover {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.movie_card .blur_back {
+.movie_card_search .blur_back {
   position: absolute;
   top: 0;
   z-index: 1;

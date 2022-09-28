@@ -49,7 +49,8 @@ input {
   position: relative;
   display: flex;
   justify-content: center;
-  top: 70px;
+  top: 90px;
+  z-index: 2;
 }
 .loader__container {
   position: relative;
@@ -74,4 +75,38 @@ input {
 .camera-body img {
   width: auto;
   height: auto;
+}
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.arrow-left {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right: 30px solid #fcce5d;
+  animation: blinking 2s linear infinite;
+  top: -25px;
+  z-index: 1;
 }

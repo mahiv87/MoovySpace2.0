@@ -48,7 +48,7 @@ const Feed = () => {
             if (user.savedMovies.length) {
               return (
                 <div className="reel">
-                  <div className="movie_card single">
+                  <div className="movie_card_feed single">
                     <div className="info_section">
                       <div className="movie_header">
                         <img
@@ -58,7 +58,7 @@ const Feed = () => {
                           }`}
                         />
                         <h1 id="movieTitle">{user.savedMovies.at(-1).title}</h1>
-                        <div className="movieUser">
+                        <div id="movieUser">
                           <Link to={`/profiles/${user.username}`}>
                             {' '}
                             {user.username}{' '}
@@ -74,7 +74,7 @@ const Feed = () => {
                         </div>
                       </div>
                       <div className="movie_desc">
-                        <p className="text">
+                        <p className="description">
                           {user.savedMovies.at(-1).description}
                         </p>
                         <a

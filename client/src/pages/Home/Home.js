@@ -90,60 +90,71 @@ const Home = () => {
 		}
 	};
 
-	return (
-		<main className="movieContainer">
-			{loading ? (
-				<div className="loader">
-					<div className="loader__filmstrip"></div>
-					<p className="loader__text">loading</p>
-				</div>
-			) : (
-				<div>
-					<div className="main_movie_card single">
-						<div className="info_section">
-							<div className="movie_header">
-								<img className="locandina" src={posterImage} />
-								<h1 id="movieTitle">{searchContext.details.title}</h1>
-								<p className="text">{searchContext.details.overview}</p>
-								{Auth.loggedIn() && (
-									<div>
-										<button
-											disabled={savedMovieIds?.some((savedMovieId) => savedMovieId === movieData.movieId)}
-											onClick={handleSaveMovie}
-											className="btn btn-primary"
-										>
-											{savedMovieIds?.some((savedMovieId) => savedMovieId === movieData.movieId)
-												? 'Added to watch list!'
-												: 'Add to Watch List'}
-										</button>
-										<button
-											disabled={likedMovieIds?.some((likedMovieId) => likedMovieId === movieData.movieId)}
-											onClick={handleLikeMovie}
-											className="btn btn-primary"
-										>
-											{likedMovieIds?.some((likedMovieId) => likedMovieId === movieData.movieId)
-												? 'Movie has been liked!'
-												: 'Like Movie'}
-										</button>
-									</div>
-								)}
-							</div>
-							<div className="movie_desc">
-								<div className="trailerContainer">
-									{searchContext.trailer ? (
-										<Trailer className="trailer" embedId={searchContext.trailer} />
-									) : (
-										<p> VIDEO TRAILER IS NOT AVAILABLE</p>
-									)}
-								</div>
-							</div>
-						</div>
-						<img className="blur_back" src={movieBackdrop}></img>
-					</div>
-				</div>
-			)}
-		</main>
-	);
+  return (
+    <main className="movieContainer">
+      {loading ? (
+        <div className="loader">
+          <div className="loader__filmstrip"></div>
+          <p className="loader__text">loading</p>
+        </div>
+      ) : (
+        <div>
+          <div className="main_movie_card single">
+            <div className="info_section">
+              <div className="movie_header">
+                <img className="locandina" src={posterImage} />
+                <h1 id="movieTitle">{searchContext.details.title}</h1>
+                <p className="text">{searchContext.details.overview}</p>
+                {Auth.loggedIn() && (
+                  <div>
+                    <button
+                      disabled={savedMovieIds?.some(
+                        (savedMovieId) => savedMovieId === movieData.movieId
+                      )}
+                      onClick={handleSaveMovie}
+                      className="btn btn-primary"
+                    >
+                      {savedMovieIds?.some(
+                        (savedMovieId) => savedMovieId === movieData.movieId
+                      )
+                        ? 'Added to watch list!'
+                        : 'Add to Watch List'}
+                    </button>
+                    <button
+                      disabled={likedMovieIds?.some(
+                        (likedMovieId) => likedMovieId === movieData.movieId
+                      )}
+                      onClick={handleLikeMovie}
+                      className="btn btn-primary"
+                    >
+                      {likedMovieIds?.some(
+                        (likedMovieId) => likedMovieId === movieData.movieId
+                      )
+                        ? 'Movie has been liked!'
+                        : 'Like Movie'}
+                    </button>
+                  </div>
+                )}
+              </div>
+              <div className="movie_desc">
+                <div className="trailerContainer">
+                  {searchContext.trailer ? (
+                    <Trailer
+                      className="trailer"
+                      embedId={searchContext.trailer}
+                    />
+                  ) : (
+                    <p> VIDEO TRAILER IS NOT AVAILABLE</p>
+                  )}
+                </div>
+              </div>
+            </div>
+            <img className="blur_back" src={movieBackdrop}></img>
+          </div>
+        </div>
+      )}
+    </main>
+  );
 };
 
 export default Home;
