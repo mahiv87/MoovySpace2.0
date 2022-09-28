@@ -8,7 +8,7 @@
 -   [Technologies](#technologies)
 -   [Installation](#installation)
 -   [Usage](#usage)
--   [Screenshot](#Screenshot)
+-   [Screenshots](#screenshots)
 -   [License](#license)
 -   [Questions](#questions)
 
@@ -29,7 +29,7 @@ MoovySpace is a platform for cinephiles to log movies they've watched, star movi
 -   React.js
 -   MERN
 -   Heroku
--   Framer-Motion
+-   Framer-Motion.js
 
 ## Installation
 
@@ -40,7 +40,16 @@ No installation required
 Visit the deployed app on Heroku
 https://moovyspace.herokuapp.com/
 
-## Screenshot
+## Screenshots
+
+- Landing Page: 
+<img width="1440" alt="Screen Shot 2022-09-28 at 3 37 20 PM" src="https://user-images.githubusercontent.com/60634270/192893421-fe7fd18a-be0a-4dab-bc08-c5d22ea9bc43.png">
+
+- Profile Page:
+<img width="1440" alt="Screen Shot 2022-09-28 at 3 36 59 PM" src="https://user-images.githubusercontent.com/60634270/192893477-0254be23-8b3d-4acf-8fcd-1d1a0e29eab5.png">
+
+- News Feed Page:
+<img width="1440" alt="Screen Shot 2022-09-28 at 3 36 22 PM" src="https://user-images.githubusercontent.com/60634270/192893514-3eb99723-3271-46bd-9a05-b61b8d06986a.png">
 
 ![Screenshot](https://user-images.githubusercontent.com/70458726/183254971-a204f2ea-a50d-4dfa-8540-ec53fb09ffa9.png)
 
