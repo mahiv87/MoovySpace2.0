@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import VideocamIcon from '@mui/icons-material/Videocam';
 
 import './index.scss';
@@ -7,36 +7,52 @@ let backdrop2;
 let backdrop3;
 
 function FavoriteMovies(props) {
-	const { favoriteMovies } = props;
+  const { favoriteMovies } = props;
 
-	const handleBackground = (e) => {
-		backdrop1 = 'https://image.tmdb.org/t/p/original' + favoriteMovies[0].backdrop;
-		backdrop2 = 'https://image.tmdb.org/t/p/original' + favoriteMovies[1].backdrop;
-		backdrop3 = 'https://image.tmdb.org/t/p/original' + favoriteMovies[2].backdrop;
+  const defaultBackGround =
+    'https://image.tmdb.org/t/p/original' + favoriteMovies[2].backdrop;
 
-		if (e.target.id === 'item1') {
-			if (favoriteMovies[0].backdrop) {
-				document.getElementById('backdrop').style.cssText += `background-image:url(${backdrop1})`;
-			} else {
-				document.getElementById('backdrop').style.backgroundColor = 'red';
-			}
-		} else if (e.target.id === 'item2') {
-			if (favoriteMovies[1].backdrop) {
-				document.getElementById('backdrop').style.cssText += `background-image:url(${backdrop2})`;
-			} else {
-				document.getElementById('backdrop').style.backgroundColor = 'blue';
-			}
-		} else if (e.target.id === 'item3') {
-			if (favoriteMovies[2].backdrop) {
-				document.getElementById('backdrop').style.cssText += `background-image:url(${backdrop3})`;
-			} else {
-				document.getElementById('backdrop').style.backgroundColor = 'green';
-			}
-		}
-	};
+  const handleBackground = (e) => {
+    backdrop1 =
+      'https://image.tmdb.org/t/p/original' + favoriteMovies[0].backdrop;
+    backdrop2 =
+      'https://image.tmdb.org/t/p/original' + favoriteMovies[1].backdrop;
+    backdrop3 =
+      'https://image.tmdb.org/t/p/original' + favoriteMovies[2].backdrop;
+
+    if (e.target.id === 'item1') {
+      if (favoriteMovies[0].backdrop) {
+        document.getElementById(
+          'backdrop'
+        ).style.cssText += `background-image:url(${backdrop1})`;
+      } else {
+        document.getElementById('backdrop').style.backgroundColor = 'red';
+      }
+    } else if (e.target.id === 'item2') {
+      if (favoriteMovies[1].backdrop) {
+        document.getElementById(
+          'backdrop'
+        ).style.cssText += `background-image:url(${backdrop2})`;
+      } else {
+        document.getElementById('backdrop').style.backgroundColor = 'blue';
+      }
+    } else if (e.target.id === 'item3') {
+      if (favoriteMovies[2].backdrop) {
+        document.getElementById(
+          'backdrop'
+        ).style.cssText += `background-image:url(${backdrop3})`;
+      } else {
+        document.getElementById('backdrop').style.backgroundColor = 'green';
+      }
+    }
+  };
 
   return (
-    <section className="projectSection" id="backdrop">
+    <section
+      className="projectSection"
+      id="backdrop"
+      style={{ backgroundImage: `url(${defaultBackGround})` }}
+    >
       <div className="posterContainer">
         <input
           type="radio"
