@@ -19,21 +19,20 @@ export default function Signup() {
   const password = document.getElementById('password');
   const email = document.getElementById('email');
 
-	const favoriteMovie1 = document.getElementById('favoriteMovie1');
-	const favoriteMovie2 = document.getElementById('favoriteMovie2');
-	const favoriteMovie3 = document.getElementById('favoriteMovie3');
+  const favoriteMovie1 = document.getElementById('favoriteMovie1');
+  const favoriteMovie2 = document.getElementById('favoriteMovie2');
+  const favoriteMovie3 = document.getElementById('favoriteMovie3');
 
-	var windowSize = window.width;
+  var windowSize = window.innerWidth;
 
-
-	const [formState, setFormState] = useState({
-		username: '',
-		email: '',
-		password: '',
-		firstFavMovie: '',
-		secondFavMovie: '',
-		thirdFavMovie: ''
-	});
+  const [formState, setFormState] = useState({
+    username: '',
+    email: '',
+    password: '',
+    firstFavMovie: '',
+    secondFavMovie: '',
+    thirdFavMovie: '',
+  });
 
   const [addUser, { error, data }] = useMutation(ADD_USER);
   const [favoriteMovie] = useMutation(FAVORITE_MOVIE);
@@ -183,6 +182,7 @@ export default function Signup() {
   ) {
     leftSequence();
     rightSequence();
+    console.log('success');
   }
 
   if (
@@ -293,34 +293,37 @@ export default function Signup() {
                   <div className="arrow-left"></div>
                 </div>
               </motion.div>
-
-              <input
-                id="favoriteMovie1"
-                className="form-input"
-                placeholder="Ex: The Other Guys"
-                name="firstFavMovie"
-                type="text"
-                value={formState.firstFavMovie}
-                onChange={handleChange}
-              />
-              <input
-                id="favoriteMovie2"
-                className="form-input"
-                placeholder="Ex: Forrest Gump"
-                name="secondFavMovie"
-                type="text"
-                value={formState.secondFavMovie}
-                onChange={handleChange}
-              />
-              <input
-                id="favoriteMovie3"
-                className="form-input"
-                placeholder="Ex: Cars"
-                name="thirdFavMovie"
-                type="text"
-                value={formState.thirdFavMovie}
-                onChange={handleChange}
-              />
+              {formState.username && formState.email && formState.password && (
+                <>
+                  <input
+                    id="favoriteMovie1"
+                    className="form-input"
+                    placeholder="Ex: The Other Guys"
+                    name="firstFavMovie"
+                    type="text"
+                    value={formState.firstFavMovie}
+                    onChange={handleChange}
+                  />
+                  <input
+                    id="favoriteMovie2"
+                    className="form-input"
+                    placeholder="Ex: Forrest Gump"
+                    name="secondFavMovie"
+                    type="text"
+                    value={formState.secondFavMovie}
+                    onChange={handleChange}
+                  />
+                  <input
+                    id="favoriteMovie3"
+                    className="form-input"
+                    placeholder="Ex: Cars"
+                    name="thirdFavMovie"
+                    type="text"
+                    value={formState.thirdFavMovie}
+                    onChange={handleChange}
+                  />
+                </>
+              )}
             </div>
             <div className="signUp">
               <button
