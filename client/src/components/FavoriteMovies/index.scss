@@ -1,153 +1,153 @@
 img {
-  width: 300px;
-  height: 450px;
-  opacity: 1;
+	width: 300px;
+	height: 450px;
+	opacity: 1;
 }
 body {
-  margin: 0;
+	margin: 0;
 }
 input[type='radio'] {
-  display: none;
+	display: none;
 }
 
 .projectSection {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  transition: background 0.5s ease-in;
-  width: 100%;
-  height: 80%;
-  background-position: center;
-  background-size: cover;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	transition: background 0.5s ease-in;
+	width: 100%;
+	height: 41rem;
+	background-position: center;
+	background-size: cover;
 }
 
 .card {
-  position: absolute;
-  width: auto;
-  height: auto;
-  transition: transform 0.4s ease;
-  cursor: pointer;
+	position: absolute;
+	width: auto;
+	height: auto;
+	transition: transform 0.4s ease;
+	cursor: pointer;
 }
 
 .posterContainer {
-  width: 100%;
-  height: 100%;
-  max-width: 780px;
-  max-height: 600px;
-  transform-style: preserve-3d;
-  position: relative;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+	width: 100%;
+	height: 100%;
+	max-width: 780px;
+	max-height: 600px;
+	transform-style: preserve-3d;
+	position: relative;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .cards {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
 }
 #item1,
 #item2,
 #item3 {
-  opacity: 1;
+	opacity: 1;
 }
 #item1:checked ~ .cards #project3,
 #item2:checked ~ .cards #project1,
 #item3:checked ~ .cards #project2 {
-  transform: translatex(-50%) scale(0.8);
-  opacity: 0.8;
-  z-index: 0;
-  transition: 0.5s ease-in;
+	transform: translatex(-50%) scale(0.8);
+	opacity: 0.8;
+	z-index: 0;
+	transition: 0.5s ease-in;
 }
 
 #item1:checked ~ .cards #project2,
 #item2:checked ~ .cards #project3,
 #item3:checked ~ .cards #project1 {
-  transform: translatex(50%) scale(0.8);
-  opacity: 0.8;
-  z-index: 0;
-  transition: 0.5s ease-in;
+	transform: translatex(50%) scale(0.8);
+	opacity: 0.8;
+	z-index: 0;
+	transition: 0.5s ease-in;
 }
 
 #item1:checked ~ .cards #project1,
 #item2:checked ~ .cards #project2,
 #item3:checked ~ .cards #project3 {
-  transform: translatex(0) scale(1);
-  opacity: 1;
-  z-index: 1;
-  transition: 0.5s ease-in;
-  img {
-    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
-  }
+	transform: translatex(0) scale(1);
+	opacity: 1;
+	z-index: 1;
+	transition: 0.5s ease-in;
+	img {
+		box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+	}
 }
 
 .infoContainer {
-  background-color: #fff;
-  border-radius: 8px;
-  min-width: 260px;
-  padding: 16px 10px;
-  position: relative;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  width: 30%;
-  right: 10px;
-  margin: auto;
-  top: -50px;
+	background-color: #fff;
+	border-radius: 8px;
+	min-width: 260px;
+	padding: 16px 10px;
+	position: relative;
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	width: 30%;
+	right: 10px;
+	margin: auto;
+	top: -50px;
 }
 
 .upperpart {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-  height: 36px;
-  overflow: hidden;
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-bottom: 12px;
+	height: 36px;
+	overflow: hidden;
 }
 .projectinfo {
-  width: calc(100% - 32px);
-  display: block;
+	width: calc(100% - 32px);
+	display: block;
 }
 .projectinfo .title {
-  color: #403d40;
-  font-size: 14px;
-  line-height: 24px;
+	color: #403d40;
+	font-size: 14px;
+	line-height: 24px;
 }
 .subline {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 }
 .liveLink {
-  font-size: 12px;
-  line-height: 8px;
+	font-size: 12px;
+	line-height: 8px;
 }
 .cameraIcon {
-  position: relative;
-  top: -18px;
-  line-height: 16px;
-  color: #a5a5a5;
-  margin-left: auto;
-  margin-bottom: 0px;
+	position: relative;
+	top: -18px;
+	line-height: 16px;
+	color: #a5a5a5;
+	margin-left: auto;
+	margin-bottom: 0px;
 }
 .infoarea {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 30px;
-  transition: transform 0.4s ease-in;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 30px;
+	transition: transform 0.4s ease-in;
 }
 #item1:checked ~ .infoContainer #test {
-  transform: translateY(-5px);
+	transform: translateY(-5px);
 }
 
 #item2:checked ~ .infoContainer #test {
-  transform: translateY(-50px);
+	transform: translateY(-50px);
 }
 #item3:checked ~ .infoContainer #test {
-  transform: translateY(-100px);
+	transform: translateY(-100px);
 }

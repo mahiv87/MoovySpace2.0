@@ -1,59 +1,63 @@
 #profile-header {
-  position: relative;
-  display: flex;
-  justify-content: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	font-size: 32px;
+	font-weight: bold;
 }
 .movie-headers {
-  position: relative;
-  text-align: center;
-  bottom: -150px;
+	position: relative;
+	text-align: center;
+	bottom: -134px;
+	font-size: 32px;
+	font-weight: bold;
 }
 .loader {
-  margin: auto;
-  width: 100px;
+	margin: auto;
+	width: 100px;
 }
 .loader__text {
-  position: relative;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 20px;
-  color: #4f4f50;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: Anton, sans-serif;
+	position: relative;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 20px;
+	color: #4f4f50;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: Anton, sans-serif;
 }
 
 .loader__filmstrip {
-  position: relative;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 200px;
-  background: #4f4f50;
-  z-index: -1;
+	position: relative;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	height: 200px;
+	background: #4f4f50;
+	z-index: -1;
 }
 
 .loader__filmstrip:before,
 .loader__filmstrip:after {
-  content: '';
-  position: absolute;
-  height: 105%;
-  border-left: 5px dashed #f5f1ed;
-  -webkit-animation: roll 230ms infinite;
-  animation: roll 140ms infinite;
+	content: '';
+	position: absolute;
+	height: 105%;
+	border-left: 5px dashed #f5f1ed;
+	-webkit-animation: roll 230ms infinite;
+	animation: roll 140ms infinite;
 }
 
 .loader__filmstrip:before {
-  left: 5px;
+	left: 5px;
 }
 
 .loader__filmstrip:after {
-  right: 5px;
+	right: 5px;
 }
 
 /* Error element style */
@@ -65,21 +69,21 @@
 }
 
 @-webkit-keyframes roll {
-  0% {
-    top: 0px;
-  }
-  100% {
-    top: -15px;
-  }
+	0% {
+		top: 0px;
+	}
+	100% {
+		top: -15px;
+	}
 }
 
 @keyframes roll {
-  0% {
-    top: 0px;
-  }
-  100% {
-    top: -15px;
-  }
+	0% {
+		top: 0px;
+	}
+	100% {
+		top: -15px;
+	}
 }
 .projectSection {
   display: -webkit-box;
