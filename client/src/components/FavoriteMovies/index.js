@@ -9,8 +9,12 @@ let backdrop3;
 function FavoriteMovies(props) {
   const { favoriteMovies } = props;
 
-  const defaultBackGround =
-    'https://image.tmdb.org/t/p/original' + favoriteMovies[2].backdrop;
+
+	useEffect(() => {
+		backdrop3 = 'https://image.tmdb.org/t/p/original' + favoriteMovies[2].backdrop;
+		document.getElementById('backdrop').style.cssText += `background-image:url(${backdrop3})`;
+	}, []);
+
 
   const handleBackground = (e) => {
     backdrop1 =
