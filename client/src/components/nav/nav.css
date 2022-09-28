@@ -33,3 +33,10 @@ nav {
   backdrop-filter: blur(15px);
   color: white;
 }
+
+#landingPage-btn:hover {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}

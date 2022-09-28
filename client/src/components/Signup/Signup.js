@@ -167,7 +167,7 @@ export default function Signup() {
 
   async function cameraSequence() {
     await cameraAnimation.start({
-      x: '-15vw',
+      x: '-18vw',
       transition: {
         type: 'spring',
         stiffness: '30',
@@ -210,6 +210,7 @@ export default function Signup() {
             <div className="userInfoForm">
               {/* Set each div to their variant and call the animations when called */}
               {/* Each div will have a starting position and end position with the animation being handled by the framer motion library */}
+
               <motion.div
                 variants={startLeftSpotLight}
                 animate={leftSpotLightAnimation}
@@ -260,7 +261,7 @@ export default function Signup() {
                 onChange={handleChange}
               />
             </div>
-            <h4>Top 3 Movies</h4>
+            <h3 id="three-movies-header">Pick Your Top 3 Movies</h3>
             <div className="userInfoForm">
               <motion.div
                 variants={startCamera}
@@ -305,7 +306,7 @@ export default function Signup() {
               <input
                 id="favoriteMovie2"
                 className="form-input"
-                placeholder="Ex: Forst Gump"
+                placeholder="Ex: Forrest Gump"
                 name="secondFavMovie"
                 type="text"
                 value={formState.secondFavMovie}
@@ -324,7 +325,7 @@ export default function Signup() {
             <div className="signUp">
               <button
                 id="action-btn"
-                className="btn btn-block btn-primary"
+                className="action-btn action-btn-primary"
                 style={{ cursor: 'pointer' }}
                 type="submit"
               >

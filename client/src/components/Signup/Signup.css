@@ -7,18 +7,20 @@
   position: relative;
   margin: 0;
 }
-input,
-textarea {
-  width: 100%;
+input {
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  width: 80%;
   padding: 0.5rem;
   border-radius: 0.5rem;
   background: transparent;
   border: 2px solid teal;
   resize: none;
-  color: white;
-}
-input {
-  margin: 10px;
+  color: rgb(139, 139, 139);
 }
 #favoriteMovie1,
 #favoriteMovie2,
@@ -27,14 +29,40 @@ input {
   position: relative;
   bottom: 60px;
 }
+#three-movies-header {
+  position: relative;
+  margin: 0;
+}
+.action-btn {
+  width: 80%;
+  display: inline-block;
+  color: var(--color-primary);
+  margin: 1rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition);
+}
+
+.action-btn:hover {
+  background: var(--color-white);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+
+.action-btn-primary {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
 /* Set each PNG to be absolute so it can overlap other components */
 #leftSpotLight {
   position: absolute;
-  width: 50%;
+  width: 30%;
 }
 #rightSpotLight {
   position: absolute;
-  width: 50%;
+  width: 30%;
 }
 
 @keyframes rotate {

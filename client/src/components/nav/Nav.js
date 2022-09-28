@@ -10,16 +10,16 @@ const Nav = () => {
   return (
     <nav>
       <>
-        <Link to="/">
+        <Link id="landingPage-btn" to="/">
           <HomeOutlinedIcon />
         </Link>
-        <Link to="/home">
+        <Link id="homePage-btn" to="/home">
           <SavedSearchOutlinedIcon />
         </Link>
-        <Link to="/feed">
+        <Link id="feed-btn" to="/feed">
           <DynamicFeedOutlinedIcon />
         </Link>
-        <Link to="/profile">
+        <Link id="profile-btn" to="/profile">
           <AccountBoxOutlinedIcon />
         </Link>
       </>
