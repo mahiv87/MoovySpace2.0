@@ -19,21 +19,20 @@ export default function Signup() {
   const password = document.getElementById('password');
   const email = document.getElementById('email');
 
-	const favoriteMovie1 = document.getElementById('favoriteMovie1');
-	const favoriteMovie2 = document.getElementById('favoriteMovie2');
-	const favoriteMovie3 = document.getElementById('favoriteMovie3');
+  const favoriteMovie1 = document.getElementById('favoriteMovie1');
+  const favoriteMovie2 = document.getElementById('favoriteMovie2');
+  const favoriteMovie3 = document.getElementById('favoriteMovie3');
 
-	var windowSize = window.width;
+  var windowSize = window.innerWidth;
 
-
-	const [formState, setFormState] = useState({
-		username: '',
-		email: '',
-		password: '',
-		firstFavMovie: '',
-		secondFavMovie: '',
-		thirdFavMovie: ''
-	});
+  const [formState, setFormState] = useState({
+    username: '',
+    email: '',
+    password: '',
+    firstFavMovie: '',
+    secondFavMovie: '',
+    thirdFavMovie: '',
+  });
 
   const [addUser, { error, data }] = useMutation(ADD_USER);
   const [favoriteMovie] = useMutation(FAVORITE_MOVIE);
@@ -167,7 +166,7 @@ export default function Signup() {
 
   async function cameraSequence() {
     await cameraAnimation.start({
-      x: '-15vw',
+      x: '-18vw',
       transition: {
         type: 'spring',
         stiffness: '30',
@@ -183,6 +182,7 @@ export default function Signup() {
   ) {
     leftSequence();
     rightSequence();
+    console.log('success');
   }
 
   if (
@@ -210,6 +210,7 @@ export default function Signup() {
             <div className="userInfoForm">
               {/* Set each div to their variant and call the animations when called */}
               {/* Each div will have a starting position and end position with the animation being handled by the framer motion library */}
+
               <motion.div
                 variants={startLeftSpotLight}
                 animate={leftSpotLightAnimation}
@@ -260,7 +261,7 @@ export default function Signup() {
                 onChange={handleChange}
               />
             </div>
-            <h4>Top 3 Movies</h4>
+            <h3 id="three-movies-header">Pick Your Top 3 Movies</h3>
             <div className="userInfoForm">
               <motion.div
                 variants={startCamera}
@@ -292,39 +293,42 @@ export default function Signup() {
                   <div className="arrow-left"></div>
                 </div>
               </motion.div>
-
-              <input
-                id="favoriteMovie1"
-                className="form-input"
-                placeholder="Ex: The Other Guys"
-                name="firstFavMovie"
-                type="text"
-                value={formState.firstFavMovie}
-                onChange={handleChange}
-              />
-              <input
-                id="favoriteMovie2"
-                className="form-input"
-                placeholder="Ex: Forst Gump"
-                name="secondFavMovie"
-                type="text"
-                value={formState.secondFavMovie}
-                onChange={handleChange}
-              />
-              <input
-                id="favoriteMovie3"
-                className="form-input"
-                placeholder="Ex: Cars"
-                name="thirdFavMovie"
-                type="text"
-                value={formState.thirdFavMovie}
-                onChange={handleChange}
-              />
+              {formState.username && formState.email && formState.password && (
+                <>
+                  <input
+                    id="favoriteMovie1"
+                    className="form-input"
+                    placeholder="Ex: The Other Guys"
+                    name="firstFavMovie"
+                    type="text"
+                    value={formState.firstFavMovie}
+                    onChange={handleChange}
+                  />
+                  <input
+                    id="favoriteMovie2"
+                    className="form-input"
+                    placeholder="Ex: Forrest Gump"
+                    name="secondFavMovie"
+                    type="text"
+                    value={formState.secondFavMovie}
+                    onChange={handleChange}
+                  />
+                  <input
+                    id="favoriteMovie3"
+                    className="form-input"
+                    placeholder="Ex: Cars"
+                    name="thirdFavMovie"
+                    type="text"
+                    value={formState.thirdFavMovie}
+                    onChange={handleChange}
+                  />
+                </>
+              )}
             </div>
             <div className="signUp">
               <button
                 id="action-btn"
-                className="btn btn-block btn-primary"
+                className="action-btn action-btn-primary"
                 style={{ cursor: 'pointer' }}
                 type="submit"
               >
