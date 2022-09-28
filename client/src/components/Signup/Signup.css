@@ -32,6 +32,7 @@ input {
 #three-movies-header {
   position: relative;
   margin: 0;
+  bottom: 80px;
 }
 .action-btn {
   width: 80%;
@@ -77,7 +78,7 @@ input {
   position: relative;
   display: flex;
   justify-content: center;
-  top: 90px;
+  top: 110px;
   z-index: 2;
 }
 .loader__container {

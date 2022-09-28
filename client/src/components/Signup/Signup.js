@@ -261,7 +261,7 @@ export default function Signup() {
                 onChange={handleChange}
               />
             </div>
-            <h3 id="three-movies-header">Pick Your Top 3 Movies</h3>
+
             <div className="userInfoForm">
               <motion.div
                 variants={startCamera}
@@ -295,6 +295,7 @@ export default function Signup() {
               </motion.div>
               {formState.username && formState.email && formState.password && (
                 <>
+                  <h3 id="three-movies-header">Pick Your Top 3 Movies</h3>
                   <input
                     id="favoriteMovie1"
                     className="form-input"
@@ -326,14 +327,20 @@ export default function Signup() {
               )}
             </div>
             <div className="signUp">
-              <button
-                id="action-btn"
-                className="action-btn action-btn-primary"
-                style={{ cursor: 'pointer' }}
-                type="submit"
-              >
-                Action! 🎥
-              </button>
+              {formState.firstFavMovie &&
+                formState.secondFavMovie &&
+                formState.thirdFavMovie && (
+                  <>
+                    <button
+                      id="action-btn"
+                      className="action-btn action-btn-primary"
+                      style={{ cursor: 'pointer' }}
+                      type="submit"
+                    >
+                      Action! 🎥
+                    </button>
+                  </>
+                )}
             </div>
           </form>
         )}
