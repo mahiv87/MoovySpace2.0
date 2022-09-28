@@ -74,7 +74,7 @@ const HomePage = () => {
                           setIsOpen(true);
                         }}
                       >
-                        Signup instead? ✍️
+                        New Member? Sign Up Instead
                       </button>
                     )}
                   </div>
