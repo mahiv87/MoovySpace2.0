@@ -38,7 +38,7 @@ No installation required
 ## Usage
 
 Visit the deployed app on Heroku
-https://moovyspace.herokuapp.com/
+http://moovyspace2.herokuapp.com/
 
 ## Screenshots
 
